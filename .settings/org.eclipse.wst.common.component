@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="company_management">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/configuration"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/sharedUIMap"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/functions"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/screenShots"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
+        <property name="java-output-path" value="/company_management/build/classes"/>
+        <property name="context-root" value="company_management"/>
+    </wb-module>
+</project-modules>

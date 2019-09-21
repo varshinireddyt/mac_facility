@@ -1,0 +1,22 @@
+1,223,Joe,Johnson,1234,999,,,,,
+2,22,Joe,Johnson,1234,999,Please correct the following errors,Your Employee Id must between 3 and 16 digits,,,
+3,1234567890123450,Joe,Johnson,1234,999,,,,,
+4,12345678901234500,Joe,Johnson,1234,999,Please correct the following errors,Your Employee Id must between 3 and 16 digits,,,
+5,a223,Joe,Johnson,1234,999,Please correct the following errors,Your Employee ID must be a number,,,
+6,200,Joe,Johnson,1234,999,Please correct the following errors,Employee ID already in database,,,
+7,223,joe,Johnson,1234,999,Please correct the following errors,,Your First Name must start with a capital letter,,
+8,223,,Johnson,1234,999,Please correct the following errors,,Your First Name must between 1 and 45 digits,,
+9,223,J,Johnson,1234,999,,,,,
+10,223,ThisIsAVeryLongFirstNameWith45CharacterLength,Johnson,1234,999,,,,,
+11,223,ThisIsAVeryLongFirstNameWith46CharactersLength,Johnson,1234,999,Please correct the following errors,,Your First Name must between 1 and 45 digits,,
+12,223,Joe,johnson,1234,999,Please correct the following errors,,,Your Last Name must start with a capital letter,
+13,223,Joe,,1234,999,Please correct the following errors,,,Your Last Name must between 1 and 45 digits,
+14,223,Joe,J,1234,999,,,,,
+15,223,Joe,ThisIsAVeryLongLastNameWith45CharactersLength,1234,999,,,,,
+16,223,Joe,ThisIsAVeryLongLastNameWith45CharactersLength!,1234,999,Please correct the following errors,,,Your Last Name must between 1 and 45 digits,
+17,223,Joe,Johnson,a1234,999,Please correct the following errors,,,,Your Badge number must be a number
+18,223,Joe,Johnson,1234,999,,,,,
+19,223,Joe,Johnson,12,999,Please correct the following errors,,,,Your Badge Number must between 3 and 5 digits
+20,223,Joe,Johnson,123,999,,,,,
+21,223,Joe,Johnson,12345,999,,,,,
+22,223,Joe,Johnson,123456,999,Please correct the following errors,,,,Your Badge Number must between 3 and 5 digits

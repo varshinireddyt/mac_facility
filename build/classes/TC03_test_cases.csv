@@ -1,0 +1,3 @@
+1,a12,,,b23,Please correct the following errors,Your Employee ID must be a number,Your First Name must between 1 and 45 digits,Your Last Name must between 1 and 45 digits,Your Badge number must be a number
+2,99,john,smith,88,Please correct the following errors,Your Employee Id must between 3 and 16 digits,Your First Name must start with a capital letter,Your Last Name must start with a capital letter,Your Badge Number must between 3 and 5 digits
+3,9999,John,Smith,888,Please correct the following errors,Employee ID already in database,,,
