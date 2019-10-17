@@ -6,7 +6,7 @@
 	<classpathentry kind="src" path="functions"/>
 	<classpathentry kind="src" path="screenShots"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre-10">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-12.0.2">
 		<attributes>
 			<attribute name="module" value="true"/>
 			<attribute name="owner.project.facets" value="java"/>
@@ -19,12 +19,12 @@
 	</classpathentry>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/eclipse/dependency/JUnitParams-1.0.4.jar">
+	<classpathentry kind="lib" path="C:/Users/manir/Documents/SEM 3(fall 19)/CS 5324(SE)/Assignment 2/MavBook/lib/JUnitParams-1.0.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse/dependency/selenium-server-standalone-3.141.59.jar">
+	<classpathentry kind="lib" path="C:/Users/manir/Documents/SEM 3(fall 19)/CS 5324(SE)/Assignment 2/MavBook/lib/selenium-server-standalone-3.141.59.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
@@ -34,7 +34,7 @@
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse/dependency/commons-io-2.6.jar">
+	<classpathentry kind="lib" path="C:/Users/manir/Documents/SEM 3(fall 19)/CS 5324(SE)/commons-io-2.6.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
 		</attributes>

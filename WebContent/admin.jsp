@@ -15,7 +15,12 @@ if((request.getSession(false).getAttribute("Admin")== null) )
 <center><h2>Admin's Home</h2></center>
  
 Welcome <%=request.getAttribute("userName") %>
- 
+<ul>
+<li><a href="managerSearchFacility.jsp"  target="_top"><span>View My Profile</span></a></li>
+<li><a href="managerSearchFacility.jsp"  target="_top"><span>User List</span></a></li>
+<li><a href="managerSearchFacility.jsp"  target="_top"><span>Search User</span></a></li>
+</ul>
+
 <div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutController">Logout</a></div>
 </body>
 </html>
