@@ -21,6 +21,11 @@
 </tr>
 <tr>
 <td><span style="color:red"><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%></span></td>
+<td><span style="color:green"><%=(request.getAttribute("sucMessage") == null) ? "" : request.getAttribute("sucMessage")%></span></td>
+</tr>
+<tr>
+<td></td>
+<td><a href='registration.jsp'>Create a new user</a></td>
 </tr>
 <tr>
 <td></td>

@@ -11,18 +11,18 @@ if((request.getSession(false).getAttribute("Manager")== null) )
 <jsp:forward page="/login.jsp"></jsp:forward>
 <%} %>
 <body>
-<center><h2>Manager's Home</h2></center>
- 
-Welcome <%=request.getAttribute("userName") %>
-<ul>
-<li><a href="managerSearchFacility.jsp"  target="_top"><span>View My Profile</span></a></li>  
-<li><a href="managerSearchFacility.jsp"  target="_top"><span>Facility List</span></a></li> 
-<li><a href="managerSearchFacility.jsp"  target="_top"><span>Search User</span></a></li> 
-<li><a href="managerSearchFacility.jsp"  target="_top"><span>Search Facility</span></a></li>
-<li><a href="managerSearchFacility.jsp"  target="_top"><span>View Reservation list</span></a></li> 
+<h2>Manager's Home</h2>
+<h3>Welcome <%=request.getAttribute("userName") %></h3>
 
+<ul>
+<li><a href="/company_management/UserController?action=viewMyProfile&id=<%=request.getAttribute("userId") %>"  target="_top"><span>View My Profile</span></a></li>
+<li><a href="/company_management/FacilityController?action=managerFacilityList" target="_top"><span>Facility List</span></a></li> 
+<li><a href="managerSearchUser.jsp"  target="_top"><span>Search User</span></a></li> 
+<li><a href="managerSearchFacility.jsp"  target="_top"><span>Search Facility</span></a></li>
+<li><a href="/company_management/ReservationController?action=listAllReservation"  target="_top"><span>View Reservation list</span></a></li>
+<li><a href="/company_management/UserController?action=managerUserList" target="_top"><span>User list</span></a></li>
 </ul>
  
-<div style="text-align: right"><a href="<%=request.getContextPath()%>/LogoutController">Logout</a></div>
+<div style="text-align: right; width: 700px"><a href="<%=request.getContextPath()%>/LogoutController">Logout</a></div>
 </body>
 </html>

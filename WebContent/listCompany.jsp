@@ -19,7 +19,7 @@
  <form action="/company_management/CompanyController?action=listSpecificCompany" method="post">          
        <table border="1" class="myTable"> 
 			<tr class="myTableRow"> 
-				<th class="myTableHead" style="width: 20px; ">Select Company</th>
+				<th class="myTableHead" style="width: 20px; ">Select User</th>
 				<th class="myTableHead" style="padding-right: 20px; text-align: left">Company ID</th>
 				<th class="myTableHead" style="padding-right: 35px; text-align: left">Phone</th> 
 				<th class="myTableHead" style="padding-right: 20px; text-align: left">Company Name</th>

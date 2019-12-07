@@ -21,10 +21,9 @@ public class LogoutController extends HttpServlet
 		 if(session!=null) //If session is not null
 		 {
 			 session.invalidate(); //removes all session attributes bound to the session
-			 request.setAttribute("errMessage", "You have logged out successfully");
+			 request.setAttribute("errMessage", "You are logged out");
 			 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
 			 requestDispatcher.forward(request, response);
-			 System.out.println("Logged out");
 		 }
 	 }
 }

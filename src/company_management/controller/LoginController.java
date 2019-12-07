@@ -33,29 +33,35 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 	 
 	 try
 	 {
-		 String userValidate = loginDao.authenticateUser(loginBean);
-
-		 if(userValidate.equals("Admin_Role"))
+		 loginDao.authenticateUser(loginBean);
+		 
+		 if(loginBean.getRole() == null || loginBean.getRole().isEmpty()) {
+			 request.setAttribute("errMessage", "Invalid credentials");
+			 request.getRequestDispatcher("/index.jsp").forward(request, response);
+		 }
+		 else if(loginBean.getRole().equals("Admin"))
 		 {
 			 System.out.println("Admin's Home");
 			 
 			 HttpSession session = request.getSession(); //Creating a session
 			 session.setAttribute("Admin", userName); //setting session attribute
 			 request.setAttribute("userName", userName);
+			 request.setAttribute("userId", loginBean.getUserId());
 			 
 			 request.getRequestDispatcher("/admin.jsp").forward(request, response);
 		 }
-		 else if(userValidate.equals("Manager_Role"))
+		 else if(loginBean.getRole().equals("Manager"))
 		 {
 			 System.out.println("Manager's Home");
 			 
 			 HttpSession session = request.getSession();
 			 session.setAttribute("Manager", userName);
 			 request.setAttribute("userName", userName);
+			 request.setAttribute("userId", loginBean.getUserId());
 			 
 			 request.getRequestDispatcher("/manager.jsp").forward(request, response);
 		 }
-		 else if(userValidate.equals("User_Role"))
+		 else if(loginBean.getRole().equals("User"))
 		 {
 			 System.out.println("User's Home");
 			 
@@ -63,15 +69,9 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			 session.setMaxInactiveInterval(10*60);
 			 session.setAttribute("User", userName);
 			 request.setAttribute("userName", userName);
-			 
+			 request.setAttribute("userId", loginBean.getUserId());
+
 			 request.getRequestDispatcher("/user.jsp").forward(request, response);
-		 }
-		 else
-		 {
-			 System.out.println("Error message = "+userValidate);
-			 request.setAttribute("errMessage", userValidate);
-			 
-			 request.getRequestDispatcher("/index.jsp").forward(request, response);
 		 }
 	 }
 	 catch (IOException e1)

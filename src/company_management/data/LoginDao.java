@@ -11,7 +11,7 @@ import company_management.util.SQLConnection;
 public class LoginDao {
 	static SQLConnection DBMgr = SQLConnection.getInstance();
  
-public String authenticateUser(LoginBean loginBean)
+public void authenticateUser(LoginBean loginBean)
 {
 	 String userName = loginBean.getUserName();
 	 String password = loginBean.getPassword();
@@ -21,32 +21,27 @@ public String authenticateUser(LoginBean loginBean)
 	 
 	 String userNameDB = "";
 	 String passwordDB = "";
-	 String roleDB = "";
 	 
 	 try
 	 {
 		 Connection conn = SQLConnection.getDBConnection();  
 		 statement = conn.createStatement();
-		 resultSet = statement.executeQuery("select username,password,role from users");
+		 resultSet = statement.executeQuery("select userId, username,password,role from users");
 	 
 		 while(resultSet.next())
 		 {
 			 userNameDB = resultSet.getString("username");
 			 passwordDB = resultSet.getString("password");
-			 roleDB = resultSet.getString("role");
 			 
-			 if(userName.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Admin"))
-				 return "Admin_Role";
-			 else if(userName.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("Manager"))
-				 return "Manager_Role";
-			 else if(userName.equals(userNameDB) && password.equals(passwordDB) && roleDB.equals("User"))
-				 return "User_Role";
+			 if(userName.equals(userNameDB) && password.equals(passwordDB)){
+				 loginBean.setRole(resultSet.getString("role"));
+				 loginBean.setUserId(resultSet.getString("userId"));
+			 }
 		 }
 	 }
 	 catch(SQLException e)
 	 {
 		 e.printStackTrace();
 	 }
-	 return "Invalid user credentials";
 	}
 }
